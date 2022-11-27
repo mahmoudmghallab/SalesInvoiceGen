@@ -302,6 +302,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Item"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="saveButton.addActionListener(invoiceController);"/>
       </AuxValues>

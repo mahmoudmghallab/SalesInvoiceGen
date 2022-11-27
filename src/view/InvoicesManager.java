@@ -95,9 +95,14 @@ public class InvoicesManager extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(lineTable);
 
-        saveButton.setText("Save");
+        saveButton.setText("Create Item");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButtonActionPerformed(evt);
+            }
+        });
 
-        cancelBtn.setText("Cancel");
+        cancelBtn.setText("Delete Item");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelBtnActionPerformed(evt);
@@ -213,6 +218,10 @@ public class InvoicesManager extends javax.swing.JFrame {
     private void cancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelBtnActionPerformed
+
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveButtonActionPerformed
 
     /**
      * @param args the command line arguments
