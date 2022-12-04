@@ -52,7 +52,7 @@ public class InvoiceController
       case "Delete Invoice":
         deleteInvoice();
         break;
-      case "Create New Item":
+      case "Create Item":
         openNewItemDialog();
         break;
       case "Delete Item":
@@ -211,8 +211,9 @@ public class InvoiceController
 
   private void createInvoice() {
     String date = newInvoiceDialog.getInvDateField().getText();
+    String name = newInvoiceDialog.getCustNameField().getText();
     int num = invoicesManager.getNextInvoiceNumber();
-    InvoiceHeader invoice = new InvoiceHeader(num, date, date);
+    InvoiceHeader invoice = new InvoiceHeader(num, date, name);
     invoicesManager.getInvoicesList().add(invoice);
     invoicesManager.getInvoicesTableModel().fireTableDataChanged();
     newInvoiceDialog.setVisible(false);
