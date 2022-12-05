@@ -255,6 +255,7 @@ public class InvoiceController
         .getInvoicesList()
         .get(selectedInvoice);
       InvoiceLine line = new InvoiceLine(price, item, count);
+      line.setInvoiceHeader(invoice);
       invoice.getInvoicelines().add(line);
       InvoiceLinesTableModel invoiceLinesTableModel = (InvoiceLinesTableModel) invoicesManager
         .getItemTable()
